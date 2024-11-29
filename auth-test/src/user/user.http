@@ -1,0 +1,9 @@
+### 유저 생성
+POST http://localhost:3000/user/create
+Content-Type: application/json
+
+{
+  "username": "andy",
+  "password": "1234",
+  "email": "qwer@naver.com"
+}
