@@ -12,6 +12,7 @@ console.log('env : ' + process.env.NODE_ENV);
       isGlobal: true,
       cache: true,
       envFilePath: `${process.cwd()}/envs/${process.env.NODE_ENV}.env`,
+      expandVariables: true, // 환경변수 확장
     }),
     WeatherModule,
   ],
