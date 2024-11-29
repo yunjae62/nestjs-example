@@ -7,13 +7,13 @@ export class AppController {
 
   @Get('hi')
   getHello(): string {
-    const message = this.configService.get('MESSAGE');
+    const message: string = this.configService.get<string>('MESSAGE');
     console.log(message);
     return message;
   }
 
   @Get('env')
-  getEnv() {
-    return this.configService.get('URL');
+  getEnv(): string {
+    return this.configService.get<string>('URL');
   }
 }
