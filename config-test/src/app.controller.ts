@@ -11,4 +11,9 @@ export class AppController {
     console.log(message);
     return message;
   }
+
+  @Get('env')
+  getEnv() {
+    return this.configService.get('URL');
+  }
 }

@@ -3,3 +3,6 @@ GET http://localhost:3000/hi
 
 ### get weather
 GET http://localhost:3000/weather
+
+### get env
+GET http://localhost:3000/env
