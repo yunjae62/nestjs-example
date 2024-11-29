@@ -10,6 +10,7 @@ console.log('env : ' + process.env.NODE_ENV);
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
+      cache: true,
       envFilePath: `${process.cwd()}/envs/${process.env.NODE_ENV}.env`,
     }),
     WeatherModule,
