@@ -1,0 +1,9 @@
+### 회원가입
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "email": "aaa@naver.com",
+  "password": "1234",
+  "username": "yunjae"
+}
