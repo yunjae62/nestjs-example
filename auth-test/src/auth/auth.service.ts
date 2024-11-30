@@ -32,4 +32,20 @@ export class AuthService {
       throw new HttpException('서버 에러', HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
+
+  async validateUser(email: string, password: string) {
+    const user = await this.userService.getUser(email);
+
+    if (!user) {
+      return null;
+    }
+
+    const { password: hashedPassword, ...userInfo } = user;
+
+    if (bcrypt.compareSync(password, hashedPassword)) {
+      return userInfo;
+    }
+
+    return null;
+  }
 }
